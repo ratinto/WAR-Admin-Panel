@@ -9,8 +9,9 @@ import type {
   ApiResponse,
   LoginCredentials 
 } from '@/types';
+import { config } from '@/config';
 
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = config.api.baseURL;
 
 class ApiService {
   private api: AxiosInstance;
@@ -21,7 +22,7 @@ class ApiService {
       headers: {
         'Content-Type': 'application/json',
       },
-      timeout: 10000,
+      timeout: config.api.timeout,
     });
 
     // Request interceptor
