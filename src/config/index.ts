@@ -3,16 +3,6 @@
  * Centralized configuration file for all environment-specific settings
  */
 
-// Type for environment variables
-interface ImportMetaEnv {
-  readonly VITE_API_BASE_URL: string;
-  readonly VITE_DEBUG: string;
-}
-
-interface ImportMeta {
-  readonly env: ImportMetaEnv;
-}
-
 export const config = {
   // API Configuration
   api: {
